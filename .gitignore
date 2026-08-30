@@ -1,0 +1,9 @@
+# Original project brief screenshots and raw manager photos — kept locally only
+_source/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

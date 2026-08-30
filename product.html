@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product — NachoFesta Flavours</title>
+<meta name="description" content="Three NachoFesta flavours: Original ฿69, Cheese ฿79 and Spicy ฿79. Crispy tortilla chips, real melted cheese, built to share.">
+<link rel="icon" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="NachoFesta logo">
+      <span class="brand__name">Nacho<span>Festa</span></span>
+    </a>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="about-company.html">About Company</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="nav__cta" href="contact.html">Order Now</a>
+  </div>
+</header>
+
+<!-- ===================== PAGE HERO (3D) ===================== -->
+<section class="page-hero">
+  <canvas class="page-hero__scene" data-nacho-scene data-count="12"></canvas>
+  <div class="wrap" style="position:relative;z-index:2">
+    <p class="eyebrow">Our Product</p>
+    <h1>Three Flavours, <span style="color:var(--amber)">One Festa</span></h1>
+    <p>Same golden tortilla chip. Three completely different moods. Pick the one that
+       matches your table.</p>
+  </div>
+</section>
+
+<!-- ===================== PRODUCT CARDS ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="menu-grid tilt-scene">
+
+      <article class="card-3d product reveal" data-delay="1">
+        <div class="product__media">
+          <span class="product__tag product__tag--mild">Non-Spicy</span>
+          <span class="product__price">฿69</span>
+          <img src="images/product-original.jpg" alt="Original salted golden tortilla nacho chips in a rustic bowl">
+        </div>
+        <div class="product__body card-3d__pop">
+          <h3 class="product__name">Original</h3>
+          <p class="product__desc">
+            The plate we started with. Stone-ground corn tortillas fried to a deep gold,
+            finished with sea salt and a light drizzle of cheese. No heat at all — just the
+            pure, honest crunch. Perfect for kids and for anyone who wants to actually taste
+            the corn.
+          </p>
+          <div class="heat">
+            <span>Heat</span>
+            <span class="heat__chilis"><i>🌶</i><i>🌶</i><i>🌶</i></span>
+            <span style="color:var(--lime)">Mild</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card-3d product reveal" data-delay="2">
+        <div class="product__media">
+          <span class="product__tag product__tag--cheese">Best Seller</span>
+          <span class="product__price">฿79</span>
+          <img src="images/product-cheese.jpg" alt="Nachos drowning in thick molten cheddar cheese sauce with a cheese pull">
+        </div>
+        <div class="product__body card-3d__pop">
+          <h3 class="product__name">Cheese</h3>
+          <p class="product__desc">
+            Aged cheddar melted to order and poured over the pile until every chip is coated.
+            Thick, glossy and stretchy enough that the first chip pulls three more with it.
+            This is the flavour our founder was chasing.
+          </p>
+          <div class="heat">
+            <span>Heat</span>
+            <span class="heat__chilis"><i class="on">🌶</i><i>🌶</i><i>🌶</i></span>
+            <span style="color:var(--amber)">Gentle</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card-3d product reveal" data-delay="3">
+        <div class="product__media">
+          <span class="product__tag product__tag--hot">Extra Hot</span>
+          <span class="product__price">฿79</span>
+          <img src="images/product-spicy.jpg" alt="Fiery spicy nachos with jalapeños, red chili flakes and chili oil">
+        </div>
+        <div class="product__body card-3d__pop">
+          <h3 class="product__name">Spicy</h3>
+          <p class="product__desc">
+            Fresh jalapeño slices, crushed red chili and a glossy chili oil that finds every
+            edge of every chip. It builds slowly and then it does not let go. Order a drink
+            first — we are not joking.
+          </p>
+          <div class="heat">
+            <span>Heat</span>
+            <span class="heat__chilis"><i class="on">🌶</i><i class="on">🌶</i><i class="on">🌶</i></span>
+            <span style="color:var(--chili)">Fiery</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPARISON ===================== -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow">Side by Side</p>
+      <div class="rule"></div>
+      <h2 class="section__title">Compare the <em>Three</em></h2>
+      <p>Not sure which one is yours? Here is the whole menu on one line each.</p>
+    </div>
+
+    <div class="table-wrap reveal" data-delay="1">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Flavour</th>
+            <th>Heat Level</th>
+            <th>Key Toppings</th>
+            <th>Best For</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Original</td>
+            <td>None — completely non-spicy</td>
+            <td>Sea salt, light cheese drizzle</td>
+            <td>Kids, first-timers, sharing with anyone</td>
+            <td class="price">฿69</td>
+          </tr>
+          <tr>
+            <td>Cheese</td>
+            <td>Gentle</td>
+            <td>Melted aged cheddar sauce</td>
+            <td>The classic nacho experience</td>
+            <td class="price">฿79</td>
+          </tr>
+          <tr>
+            <td>Spicy</td>
+            <td>Fiery</td>
+            <td>Jalapeño, red chili flakes, chili oil</td>
+            <td>Chili lovers and dares</td>
+            <td class="price">฿79</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">All prices are in Thai Baht (THB) and include one dipping sauce of your choice.</p>
+  </div>
+</section>
+
+<!-- ===================== QUALITY ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow">Made Properly</p>
+      <div class="rule"></div>
+      <h2 class="section__title">What Every Plate <em>Has in Common</em></h2>
+    </div>
+    <div class="grid-3 tilt-scene">
+      <article class="card-3d feature reveal" data-delay="1">
+        <div class="feature__icon">🌽</div>
+        <h3>Stone-Ground Corn</h3>
+        <p>Tortillas pressed and cut in-house, never bought pre-fried. That is where the
+           crunch actually comes from.</p>
+      </article>
+      <article class="card-3d feature reveal" data-delay="2">
+        <div class="feature__icon">🛡️</div>
+        <h3>QC on Every Batch</h3>
+        <p>Our Quality Control officer checks colour, thickness and salt on every fry batch
+           before it ever reaches a plate.</p>
+      </article>
+      <article class="card-3d feature reveal" data-delay="3">
+        <div class="feature__icon">🍽️</div>
+        <h3>Built for Two or More</h3>
+        <p>Every portion is sized for sharing. If one person finishes it alone, we consider
+           that a design failure.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <p class="eyebrow">Hungry yet?</p>
+      <h2>Come Grab a Plate</h2>
+      <p>Call us, email us, or make the trip up to our headquarters. We will keep the fryer on.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="contact.html">Contact Us</a>
+        <a class="btn btn--ghost" href="about-company.html">Our Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:18px">
+          <img src="images/logo.jpg" alt="NachoFesta logo">
+          <span class="brand__name">Nacho<span>Festa</span></span>
+        </a>
+        <p>Made to crunch, made to share. Serving warmth, happiness and kindness in every bite —
+           from Mexico all the way to the Moon.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="about-company.html">About Company</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:012345678">012345678</a></li>
+          <li><a href="mailto:nachofesta@gmail.com">nachofesta@gmail.com</a></li>
+          <li>Sea of Tranquility, The Moon</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>© <span data-year></span> NachoFesta. All rights reserved.</span>
+      <span>Trade Exhibition Project — English for Communication</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/scene-nachos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

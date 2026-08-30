@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NachoFesta — Made to Crunch, Made to Share</title>
+<meta name="description" content="NachoFesta serves warm, crispy, cheesy nachos. Discover what nachos are, where they came from, and why every bite is made to share.">
+<link rel="icon" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="NachoFesta logo">
+      <span class="brand__name">Nacho<span>Festa</span></span>
+    </a>
+    <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="about-company.html">About Company</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="nav__cta" href="product.html">Order Now</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <canvas id="scene-hero" data-nacho-scene data-count="18"></canvas>
+  <div class="hero__inner">
+    <img class="hero__logo" src="images/logo.jpg" alt="NachoFesta emblem">
+    <h1 class="hero__title">NachoFesta</h1>
+    <p class="hero__slogan">Made to Crunch, Made to Share</p>
+    <p class="hero__sub">
+      Golden tortilla chips, real melted cheese and a whole lot of warmth —
+      served the way a kind grandfather once served them to a hungry little boy.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="product.html">Explore Our Menu</a>
+      <a class="btn btn--ghost" href="about-company.html">Our Story</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><i></i></div>
+</section>
+
+<!-- ===================== WHAT ARE NACHOS ===================== -->
+<section class="section section--tint">
+  <div class="wrap split tilt-scene">
+    <div class="split__media reveal">
+      <img src="images/hero-nachos.jpg" alt="A mountain of golden tortilla chips with a molten cheese pull, jalapeños and pico de gallo">
+    </div>
+    <div class="reveal" data-delay="1">
+      <p class="eyebrow">The Original</p>
+      <h2 class="section__title">So… What Are <em>Nachos</em>?</h2>
+      <p>
+        Nachos are crispy triangles of fried corn tortilla, buried under melted cheese and
+        piled high with toppings like jalapeños, salsa and fresh herbs. Simple, loud and
+        impossible to eat alone.
+      </p>
+      <p>
+        They were invented in <strong>1943</strong> in <strong>Piedras Negras, Coahuila —
+        Mexico</strong>, right on the Texas border. A maître d' named
+        <strong>Ignacio "Nacho" Anaya</strong> had a group of hungry guests and a nearly empty
+        kitchen, so he grabbed tortillas, cheddar and jalapeños and threw them under the heat.
+        He called the dish "Nacho's especiales" — and the world has called them nachos ever since.
+      </p>
+
+      <div class="facts">
+        <div class="fact"><b>1943</b><span>Year Invented</span></div>
+        <div class="fact"><b>Piedras Negras</b><span>Coahuila, Mexico</span></div>
+        <div class="fact"><b>Ignacio Anaya</b><span>The Original Nacho</span></div>
+      </div>
+
+      <a class="btn btn--primary" href="product.html">Taste Our Flavours</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY NACHOFESTA ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow">Why NachoFesta</p>
+      <div class="rule"></div>
+      <h2 class="section__title">Three Reasons People <em>Keep Coming Back</em></h2>
+      <p>We only ever set out to do three things well — and then we do them every single day.</p>
+    </div>
+
+    <div class="grid-3 tilt-scene">
+      <article class="card-3d feature reveal" data-delay="1">
+        <div class="feature__icon">🔺</div>
+        <h3>Crispy Every Time</h3>
+        <p>Stone-ground corn tortillas, cut fresh and fried to that exact shade of gold where
+           the crunch is loud but the chip never shatters.</p>
+      </article>
+      <article class="card-3d feature reveal" data-delay="2">
+        <div class="feature__icon">🧀</div>
+        <h3>Real Melted Cheese</h3>
+        <p>No powder, no shortcuts. Aged cheddar melted to order so it stretches, pulls and
+           settles into every gap between the chips.</p>
+      </article>
+      <article class="card-3d feature reveal" data-delay="3">
+        <div class="feature__icon">🤝</div>
+        <h3>Made to Share</h3>
+        <p>Every portion is built for a table, not a person. Nachos taste better when hands
+           keep reaching into the same plate.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STORY TEASER ===================== -->
+<section class="section section--tint">
+  <div class="wrap split split--flip tilt-scene">
+    <div class="split__media reveal">
+      <img src="images/product-cheese.jpg" alt="Nachos covered in thick molten cheddar cheese sauce">
+    </div>
+    <div class="reveal" data-delay="1">
+      <p class="eyebrow">Our Beginning</p>
+      <h2 class="section__title">It Started With <em>One Warm Plate</em></h2>
+      <p>
+        When our founder was a child he was very poor, and there were days when he had nothing
+        to eat. One day a kind grandfather made him something warm, crispy and cheesy. He never
+        forgot the taste — even though he did not yet know it was called nachos.
+      </p>
+      <p>
+        Years later, once he had found success, he set out to recreate that exact feeling.
+        That is why NachoFesta exists: to serve not only delicious nachos, but warmth,
+        happiness and kindness in every bite.
+      </p>
+      <a class="btn btn--ghost" href="about-company.html">Read the Full Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <p class="eyebrow">Three flavours. One festa.</p>
+      <h2>Pick Your Crunch</h2>
+      <p>Original, Cheese or Spicy — from just ฿69. Grab a plate and share it with someone.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="product.html">See the Menu</a>
+        <a class="btn btn--ghost" href="contact.html">Find Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:18px">
+          <img src="images/logo.jpg" alt="NachoFesta logo">
+          <span class="brand__name">Nacho<span>Festa</span></span>
+        </a>
+        <p>Made to crunch, made to share. Serving warmth, happiness and kindness in every bite —
+           from Mexico all the way to the Moon.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="about-company.html">About Company</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:012345678">012345678</a></li>
+          <li><a href="mailto:nachofesta@gmail.com">nachofesta@gmail.com</a></li>
+          <li>Sea of Tranquility, The Moon</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>© <span data-year></span> NachoFesta. All rights reserved.</span>
+      <span>Trade Exhibition Project — English for Communication</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/scene-nachos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
