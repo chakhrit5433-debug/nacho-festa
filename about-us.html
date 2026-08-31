@@ -50,13 +50,15 @@
       <p class="eyebrow">Organizational Structure</p>
       <div class="rule"></div>
       <h2 class="section__title">Our <em>Leadership</em></h2>
-      <p>Hover any card to bring it forward.</p>
+      <p>Every manager reports to the CEO and works hand in hand with the others &mdash;
+         hover or focus a card to trace its connections.</p>
     </div>
 
     <div class="org tilt-scene">
+      <svg class="org__lines" aria-hidden="true"></svg>
 
       <!-- CEO -->
-      <article class="card-3d person org__ceo reveal" data-tilt="6">
+      <article class="card-3d person org__ceo reveal" data-tilt="6" data-node="ceo" tabindex="0">
         <div class="person__photo">
           <span class="person__badge">Chief Executive</span>
           <img src="images/team/ceo-natthakrit.jpg" alt="Natthakrit Srion, Chief Executive Officer">
@@ -65,18 +67,14 @@
           <h3 class="person__name">Natthakrit Srion</h3>
           <p class="person__role">CEO / President</p>
           <p class="person__duty">Leads the company, makes strategic decisions, and oversees all business operations.</p>
+          <p class="person__with"><span>Leads</span> all seven managers</p>
         </div>
       </article>
-
-      <!-- connector -->
-      <svg class="org__connector" viewBox="0 0 1000 78" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M500 0 V30 M125 30 H875 M125 30 V78 M375 30 V78 M625 30 V78 M875 30 V78" />
-      </svg>
 
       <!-- Managers -->
       <div class="team-grid">
 
-        <article class="card-3d person reveal" data-delay="1">
+        <article class="card-3d person reveal" data-delay="1" data-node="finance" data-links="sales production" tabindex="0">
           <div class="person__photo">
             <span class="person__badge">Finance</span>
             <img src="images/team/finance-teerapong.jpg" alt="Teerapong Noojankaew, Finance Manager">
@@ -85,10 +83,11 @@
             <h3 class="person__name">Teerapong Noojankaew</h3>
             <p class="person__role">Finance Manager</p>
             <p class="person__duty">Manages the company's budget, accounting, financial records, and financial planning.</p>
+            <p class="person__with"><span>Works with</span> Sales &middot; Production</p>
           </div>
         </article>
 
-        <article class="card-3d person reveal" data-delay="2">
+        <article class="card-3d person reveal" data-delay="2" data-node="sales" data-links="finance marketing service" tabindex="0">
           <div class="person__photo">
             <span class="person__badge">Sales</span>
             <img src="images/team/sales-natpaphada.jpg" alt="Natpaphada Puenpha, Sales Manager">
@@ -97,10 +96,11 @@
             <h3 class="person__name">Natpaphada Puenpha</h3>
             <p class="person__role">Sales Manager</p>
             <p class="person__duty">Promotes products, manages customer relationships, and achieves sales targets.</p>
+            <p class="person__with"><span>Works with</span> Finance &middot; Marketing &middot; Service &amp; HR</p>
           </div>
         </article>
 
-        <article class="card-3d person reveal" data-delay="3">
+        <article class="card-3d person reveal" data-delay="3" data-node="marketing" data-links="sales rnd" tabindex="0">
           <div class="person__photo">
             <span class="person__badge">Marketing</span>
             <img src="images/team/marketing-pheerason.jpg" alt="Pheerason Boonrach, Marketing Manager">
@@ -109,22 +109,24 @@
             <h3 class="person__name">Pheerason Boonrach</h3>
             <p class="person__role">Marketing Manager</p>
             <p class="person__duty">Plans marketing campaigns, manages social media, and increases brand awareness.</p>
+            <p class="person__with"><span>Works with</span> Sales &middot; R &amp; D</p>
           </div>
         </article>
 
-        <article class="card-3d person reveal" data-delay="4">
+        <article class="card-3d person reveal" data-delay="4" data-node="qc" data-links="rnd production" tabindex="0">
           <div class="person__photo">
             <span class="person__badge">Quality Control</span>
             <img src="images/team/qc-phaewwanit.jpg" alt="Phaewwanit Vongtakul, Quality Control Officer">
           </div>
           <div class="person__body card-3d__pop">
             <h3 class="person__name">Phaewwanit Vongtakul</h3>
-            <p class="person__role">Quality Control (QC) Officer</p>
+            <p class="person__role">Quality Control (QC) Manager</p>
             <p class="person__duty">Inspects product quality, ensures food safety standards, and maintains product consistency.</p>
+            <p class="person__with"><span>Works with</span> R &amp; D &middot; Production</p>
           </div>
         </article>
 
-        <article class="card-3d person reveal" data-delay="5">
+        <article class="card-3d person reveal" data-delay="5" data-node="rnd" data-links="marketing qc" tabindex="0">
           <div class="person__photo">
             <span class="person__badge">R &amp; D</span>
             <img src="images/team/rnd-chotikul.jpg" alt="Chotikul Wirun, Research and Development Manager">
@@ -133,10 +135,11 @@
             <h3 class="person__name">Chotikul Wirun</h3>
             <p class="person__role">R &amp; D Manager</p>
             <p class="person__duty">Develops new products, improves recipes, and conducts product testing.</p>
+            <p class="person__with"><span>Works with</span> Quality Control &middot; Marketing</p>
           </div>
         </article>
 
-        <article class="card-3d person reveal" data-delay="6">
+        <article class="card-3d person reveal" data-delay="6" data-node="production" data-links="finance qc service" tabindex="0">
           <div class="person__photo">
             <span class="person__badge">Production</span>
             <img src="images/team/production-tankoon.jpg" alt="Tankoon Kwankaew, Production Manager">
@@ -145,10 +148,11 @@
             <h3 class="person__name">Tankoon Kwankaew</h3>
             <p class="person__role">Production Manager</p>
             <p class="person__duty">Supervises the production process, ensures efficiency, and maintains production quality.</p>
+            <p class="person__with"><span>Works with</span> Quality Control &middot; Finance &middot; Service &amp; HR</p>
           </div>
         </article>
 
-        <article class="card-3d person reveal" data-delay="7">
+        <article class="card-3d person reveal" data-delay="7" data-node="service" data-links="sales production" tabindex="0">
           <div class="person__photo">
             <span class="person__badge">Service &amp; HR</span>
             <img src="images/team/hr-jirawadee.jpg" alt="Jirawadee Mingmit, Customer Service and HR Manager">
@@ -157,6 +161,7 @@
             <h3 class="person__name">Jirawadee Mingmit</h3>
             <p class="person__role">Customer Service &amp; HR Manager</p>
             <p class="person__duty">Handles customer inquiries and complaints, provides customer support, recruits and trains employees, maintains employee records, and promotes a positive work environment.</p>
+            <p class="person__with"><span>Works with</span> Sales &middot; Production</p>
           </div>
         </article>
 
@@ -233,6 +238,7 @@
   </div>
 </footer>
 
+<script src="js/org-chart.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

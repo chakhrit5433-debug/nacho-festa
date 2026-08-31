@@ -376,18 +376,45 @@ h1, h2, h3, h4 { line-height: 1.2; margin: 0 0 0.5em; font-weight: 600; }
 /* ============================================================
    ORG CHART (about-us)
    ============================================================ */
-.org { display: grid; justify-items: center; gap: 0; }
+.org { display: grid; justify-items: center; row-gap: 96px; position: relative; }
 .org__ceo { max-width: 380px; width: 100%; }
-.org__connector { width: 100%; max-width: 1000px; height: 78px; overflow: visible; }
-.org__connector path { stroke: var(--amber); stroke-width: 2; fill: none; opacity: .45; }
+.org__ceo, .team-grid { position: relative; z-index: 1; }
+
+/* Link layer — paths are generated from the live layout by js/org-chart.js */
+.org__lines {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 0; overflow: visible; pointer-events: none;
+  opacity: 0; transition: opacity .9s ease .25s;
+}
+.org.is-drawn .org__lines { opacity: 1; }
+.org__link {
+  fill: none; stroke-linecap: round; stroke-linejoin: round;
+  transition: opacity .35s, stroke-width .35s;
+}
+.org__link--report { stroke: var(--amber); stroke-width: 2; opacity: .42; }
+.org.is-focused .org__link { opacity: .05; }
+.org .org__link--trace { opacity: 0; }         /* only ever shown while lit */
+.org .org__link.is-lit { opacity: .95; stroke-width: 2.6; }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
+  column-gap: 26px;
+  row-gap: 64px;
   width: 100%;
 }
 .person { overflow: hidden; text-align: center; }
+.person:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+/* Same timings as .reveal, but a quicker opacity so the dim/highlight feels responsive. */
+.org .person {
+  transition: opacity .28s ease, transform .8s cubic-bezier(.2,.7,.3,1),
+              box-shadow .35s, border-color .35s;
+}
+.org.is-focused .person { opacity: .38; }
+.org .person.is-active,
+.org .person.is-related { opacity: 1; border-color: rgba(245, 166, 35, .55); }
+.org .person.is-active { box-shadow: var(--shadow-lg), var(--glow); }
 .person__photo { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--bg-800); }
 .person__photo img {
   width: 100%; height: 100%; object-fit: cover; object-position: center top;
@@ -416,6 +443,16 @@ h1, h2, h3, h4 { line-height: 1.2; margin: 0 0 0.5em; font-weight: 600; }
   color: var(--amber); margin-bottom: 12px;
 }
 .person__duty { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
+.person__with {
+  margin: 14px 0 0; padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: .74rem; color: var(--muted); line-height: 1.5;
+}
+.person__with span {
+  display: block;
+  font-size: .6rem; letter-spacing: 1.6px; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 2px;
+}
 
 .org__ceo .person__photo { aspect-ratio: 4 / 5; }
 .org__ceo .person__name { font-size: 1.4rem; }
@@ -618,8 +655,7 @@ h1, h2, h3, h4 { line-height: 1.2; margin: 0 0 0.5em; font-weight: 600; }
    ============================================================ */
 @media (max-width: 1020px) {
   .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .org__connector { display: none; }
-  .org { gap: 34px; }
+  .org { row-gap: 84px; }
 }
 
 @media (max-width: 900px) {
@@ -651,7 +687,8 @@ h1, h2, h3, h4 { line-height: 1.2; margin: 0 0 0.5em; font-weight: 600; }
 
 @media (max-width: 560px) {
   .wrap, .nav__inner { width: calc(100% - 32px); }
-  .team-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; row-gap: 34px; padding-left: 28px; }
+  .org { row-gap: 62px; }
   .form__row { grid-template-columns: 1fr; }
   .hero__logo { width: 104px; height: 104px; }
   .cta-band, .quote-band { padding: 56px 22px; }
