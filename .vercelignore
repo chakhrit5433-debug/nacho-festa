@@ -1,0 +1,11 @@
+# Original project brief screenshots and raw manager photos — kept locally only
+_source/
+
+# Brochure build tooling (the HTML + PDF still deploy)
+brochure/build-pdf.js
+
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
